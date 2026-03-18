@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta name="charset" content="UTF8">
+       <meta name="escription" content="lab03-Creating an HTML form">
+       <meta name="keywords" content="html, form">
+       <meta name="author" content="Michael Trawn">
+       <title>CWA Help Desk Appointment</title> 
+    </head>
+    <body>
+        <a href="http://www.swin.edu.au" target="_blank">
+            <img src="resources/lab03-1/logo.png" alt="Swinburne Logo">
+        </a>    
+        
+            <h1>CWA Help Desk Appointment</h1>
+        
+        <form>
+            <p>The Help Desk is located at ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+            <p>Check Blackboard for when CWA tutors will be there.</p>
+            
+            <fieldset>
+                <legend>Student Details</legend>
+                <p><label for="SID">Student ID: </label>
+                  <input type="text" name="StudentID" id="SID" maxlength="10" minlength="7" pattern="[0-9]{7,10}">
+                </p>
+                <p><label for="GName">Given Name: </label>
+                  <input type="text" name="GivenName" id="GName" maxlength="15" minlength="1">
+                  <label for="FName">Family Name: </label>
+                  <input type="text" name="FamilyName" id="FName" maxlength="15" minlength="1">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Unit</legend>
+                <p><!--<label>COS10011 </label> -->
+                  <input type="radio" name="unit" id="unit_COS10011" value="COS10011" required="required">
+                  <label for="unit_COS10011">COS10011</label>
+                  <input type="radio" name="unit" id="unit_COS60004" value="COS60004">
+                  <label for="unit_COS60004">COS60004</label>
+                  <input type="radio" name="unit" id="unit_COS60007" value="COS60007">
+                  <label for="unit_COS60007">COS60007</label>
+                </p>
+                <P>
+                    <label for="tutor">Your Tutor</label>
+                    <select name="tutor" id="tutor" required="required">
+                        <option value="">Please Select</option>
+                        <option value="Dr Brad Jones">Dr Brad Jones</option>
+                        <option value="Sam White">Sam White</option>
+                        <option value="Sarah Aims">Sarah Aims</option>
+                        <option value="John Doe">John Doe</option>
+                    </select>
+                </P>
+            </fieldset>
+
+            <fieldset>
+                <legend>Issue</legend>
+                <p> 
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" name="issue" id="HTML" value="HTML" checked="checked">
+                    <label for="CSS">CSS</label>
+                    <input type="checkbox" name="issue" id="CSS" value="CSS">
+                    <label for="JS">JavaScript</label>
+                    <input type="checkbox" name="issue" id="JS" value="JavaScript">
+                    <label for="PHP">PHP</label>
+                    <input type="checkbox" name="issue" id="PHP" value="PHP">
+                    <label for="MySQL">MySQL</label>
+                    <input type="checkbox" name="issue" id="MySQL" value="MySQL">  
+                </p>
+                <p>
+                    <textarea name="description" id="issue_description" rows="5" cols="45">Write description of your problem here</textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Data / Time</legend>
+                <p>
+                    <label for="Date">Date</label>
+                    <input type="text" id="Date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}">
+                </p>
+                <p> 
+                    <label for="Time">Time</label>
+                    <input type="text" id="Time" placeholder="00:00" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]">
+                </p>
+            </fieldset>
+            <input type="submit" name="Submit" id="Book" value="Book">
+            <input type= "reset" value="Reset Form">
+        </form>
+    </body>
+</html>
